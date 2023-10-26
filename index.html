@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- link external font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto+Condensed:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link external icon hosted on a live server -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- link bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Link personal css -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./heading.css" />
+    <link rel="stylesheet" href="./mediaQuery.css" />
+  </head>
+  <body>
+    <!-- The navabar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./images/logo-removebg-preview.png"
+            alt="Logo"
+            width="100"
+            height="100"
+            style="padding-left: 50px"
+            class="d-inline-block align-text-top imglogo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse listnav" id="navbarNav">
+          <ul class="nav_links navbar-nav">
+            <li class="link nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="link nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="link nav-item">
+              <a class="nav-link" href="#">Booking</a>
+            </li>
+            <li class="link nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="link nav-item sign_up">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="section_container header_container">
+      <h1 class="section_header">
+        Find And Book <br />
+        A Great Experience
+      </h1>
+      <img id="welcomeimg" src="./images/header.jpg" alt="" />
+    </header>
+
+    <section class="section_container booking_container">
+      <div class="booking_nav">
+        <div class="form_group">
+          <label for="">Fare:</label>
+          <select name="fare" id="fare">
+            <option value="one_way">One Way</option>
+            <option value="return">Return</option>
+          </select>
+        </div>
+
+        <div class="form_group">
+          <label for="">class</label>
+          <select name="class" id="class">
+            <option value="economy">Economy class</option>
+            <option value="business">Business class</option>
+            <option value="first_class">First class</option>
+          </select>
+        </div>
+
+        <div class="form_group">
+          <label for="">From:</label>
+          <select name="from" id="from">
+            <option value="lagos">Lagos</option>
+            <option value="abuja">Abuja</option>
+            <option value="kaduna">Kaduna</option>
+            <option value="enugu">Enugu</option>
+          </select>
+        </div>
+
+        <div class="form_group">
+          <label for="">To:</label>
+          <select name="to" id="to">
+            <option value="default">Default</option>
+            <option value="paris">Paris, France</option>
+            <option value="newyork">New York, USA</option>
+            <option value="nairobi">Nairobi, Kenya</option>
+            <option value="capetown">Capetown, SouthAfrica</option>
+            <option value="lisbon">Lisbon, Portugal</option>
+            <option value="ontario">Ontario, Canada</option>
+          </select>
+        </div>
+      </div>
+
+      <form id="form">
+        <!--Departure  -->
+        <div class="form_group">
+          <span><i class="ri-calendar-line"></i> </span>
+          <div class="input_content">
+            <div class="input_group">
+              <input type="date" id="depatureDate" required/>
+            </div>
+            <p>Departure Date</p>
+            <div id="dateError"></div>
+          </div>
+        </div>
+
+        <!-- Return -->
+        <div class="form_group" id="return">
+          <span><i class="ri-calendar-line"></i> </span>
+          <div class="input_content">
+            <div class="input_group">
+              <input type="date" id="returnDate" required/>
+            </div>
+            <p>Return Date</p>
+            <div id="returnError"></div>
+          </div>
+          
+        </div>
+
+        <!-- Travellers div -->
+        <div class="form_group">
+          <span><i class="ri-user-3-line"></i> </span>
+          <div class="input_content">
+            <div class="input_group">
+              <input type="number" id="travellers" required />
+              <!-- <label for="">Travellers</label> -->
+            </div>
+            <p>Add guest</p>
+          </div>
+        </div>
+        <br>
+        <div class="btn-viv">
+          <button class="btn" id="search_button">Search</button>
+        </div>
+      </form>
+
+    </section>
+
+    <section class="fleets_container">
+      <h2 class="fleets_header">Safety Tips and Guidelines</h2>
+      <div class="safety-items">
+        <p>
+          Here are some tips to follow to keep you and your fellow travelers safe
+          when you fly. Most importantly, pay attention to your flight and cabin
+          crews. They are there to keep you as safe as possible.
+        </p>
+        <ul>
+          <li>
+            Pay attention to the flight attendant safety briefing at the beginning
+          of your flight and read the safety briefing card.
+        </li>
+        <li>
+          Buckle up. Keep you and your family safe by wearing a seat belt at all
+          times while seated
+        </li>
+        <li>
+          Use an approved child safety seat or device if your child weighs less
+          than 40 pounds.
+        </li>
+        <li>
+          Prevent in-flight injuries by following your airline's carry-on
+          restrictions.
+        </li>
+        <li>
+          Check your airline's Portable Electronic Device (PED) policy.
+          <a href="">Learn more on our PED website.</a>
+        </li>
+      </ul>
+    </div>
+    </section>
+
+    <div class="fleets_container">
+      <h2 class="fleets_header">Airplane Fleets</h2>
+      <div class="fleets">
+        <div class="fleets_content">
+          <img src="./images/fleets/boeing-747-400.jpg" alt="airplane" />
+          <h4>Boeing 747-400</h4>
+          <p>
+            This model is capable of seating a maximum of 568 passengers in a
+            two-class configuration or 660 passengers in a single-class
+            configuration.
+          </p>
+        </div>
+        <div class="fleets_content">
+          <img src="./images/fleets/airbus.jpg" alt="airplane" />
+          <h4>Airbus a380</h4>
+          <p>
+            The full-length double-deck aircraft has a typical seating for 525
+            passengers, with a maximum certified capacity for 853 passengers.
+          </p>
+        </div>
+
+        <div class="fleets_content">
+          <img src="./images/fleets/private jet.jpg" alt="airplane" />
+          <h4>Business Jet</h4>
+          <p>
+            Similar to commercial planes, large private jets can hold more
+            people and typically seat up to 20 passengers. Mid-size charter
+            flights can seat between 8 and 12 passengers and small flights seat
+            closer to 6.
+          </p>
+        </div>
+
+        <div class="fleets_content">
+          <img src="./images/fleets/cargo.jpg" alt="airplane" />
+          <h4>Boeing Dreamlifter</h4>
+          <p>
+            The 747 LCF main cargo compartment has a volume of 65,000 cubic feet
+            (1,840 m3) and the maximum payload capacity is 250,000 pounds
+            (113,400 kg).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #3f51b5">
+      <!-- Grid container -->
+      <div class="container">
+        <!-- Section: Links -->
+        <section class="mt-5">
+          <!-- Grid row-->
+          <div class="row text-center d-flex justify-content-center pt-5">
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">About us</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Travel Guides</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Customer Support</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Help</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Contact</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="my-5" />
+
+        <!-- Section: Text -->
+        <section class="mb-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                distinctio earum repellat quaerat voluptatibus placeat nam,
+                commodi optio pariatur est quia magnam eum harum corrupti dicta,
+                aliquam sequi voluptate quas.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Social -->
+        <section class="text-center mb-5">
+          <a href="" class="text-white me-4">
+            <i class="fa-2xl fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fa-2xl fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fa-2xl fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fa-2xl fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fa-2xl fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fa-2xl fab fa-github"></i>
+          </a>
+        </section>
+        <!-- Section: Social -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2023 Copyright:
+        <a class="text-white" href=""
+          >Lorem Ipsun</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- link bootstrap javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

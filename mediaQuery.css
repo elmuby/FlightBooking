@@ -1,0 +1,55 @@
+
+@media (max-width: 992px){
+  .listnav{
+    margin-left: 0px;
+  }
+  .listnav>ul>li{
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+  }
+}
+@media (width<800px){
+  .booking_nav{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    }
+    .booking_nav select{
+      width: 100%;
+    }
+    .booking_container form{
+      grid-template-columns: 1fr;
+    }
+    .fleets{
+      display: grid;
+      grid-template-columns: 1fr;
+       align-items: center; 
+      }
+    .fleets_content{
+      width: 400px;
+      text-align: justify;
+      margin-left:auto ;
+    }
+    .fleets img{
+      width: 400px;
+      height: 400px;
+      padding-bottom: 12px;
+      
+    }
+    .safety-items{
+      width: auto;
+      display:grid; 
+      margin:auto; 
+    }
+
+    .safety-items p{
+      font-size: .9rem;
+    }
+    .safety-items ul li{
+      margin-left: 10px;
+      line-height: 30px;
+      font-size: .8rem;
+    }
+  }

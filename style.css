@@ -1,0 +1,209 @@
+
+.section_container{
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+.section_header{
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: var(--text-dark);
+}
+
+.btn{
+  padding: .75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: #1c96c5;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 400px;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+.btn:hover{
+  background-color: var(--primary-color-dark);
+}
+
+a{
+ text-decoration: none; 
+}
+#welcomeimg{
+  
+  height: 9cm;
+  width: 100%;
+  object-fit: cover;
+  
+}
+.imglogo{
+width: 100%;
+}
+
+.header_container .section_header{
+  text-align: center;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+/* booking div */
+
+.booking_container{
+  border-radius: 2rem;
+  border: 1px solid var(--extra-light);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  background-color: #cfecf7 ;
+}
+.input_group input {
+  background-color: none;
+  background: none;
+}
+
+
+/* Style of the booking container and form */
+
+
+.booking_nav{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  }
+  
+  .booking_nav select{
+    background-color: none;
+    background: none;
+    border: 2px solid #a0d9ef;
+    border-radius: 5px;
+    width:100%;
+    padding: 10px;
+  }
+  
+.booking_container form{
+  margin-top: 4rem;
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr) ;
+  gap: 1rem;
+}
+
+.booking_container .input_content{
+  width: 100%;
+}
+
+.booking_container .form_group{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.booking_container .form_group span{
+  padding: 10px;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  background-color: #a0d9ef;
+  border-radius: 1rem;
+}
+
+.booking_container .input_group{
+  width: 100%;
+  position: relative;
+}
+
+/* :hover{
+  border:1px solid black ;
+} */
+
+.booking_container label{
+  font-weight: 500;
+  color: var(--text-dark);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.booking_container input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-color: 1px solid var(--primary-color);
+  border-bottom: 0.5px solid silver;
+}
+
+.booking_container input:focus ~label{
+  font-size:0.8rem;
+  top: 0;
+}
+.booking_container .form_group p{
+  margin-top: .5rem;
+  font-size: .8rem;
+  color: var(--text-light);
+}
+
+.booking_container .btn{
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.btn-viv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* safety guides */
+.safety-items{
+  width: 1000px;
+  margin-left: 100px;
+  /* display: flex;
+  grid-template-columns: ; */
+}
+.safety-items ul li{
+  margin-left: 10px;
+  line-height: 30px;
+}
+.safety-items p{
+  font-size: 1.2rem;
+}
+/* fleets stylings */
+.fleets_container{
+  max-width: var(--max-width);
+  margin: auto;
+  border-radius: 2rem;
+  border: 1px solid var(--extra-light);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  padding:5rem 1rem;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.fleets{
+display: flex;
+flex-wrap: wrap;
+/* align-items: center; */
+}
+.fleets_header{
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.fleets img{
+  width: 500px;
+  height: 400px;
+  padding-bottom: 12px;
+  
+}
+.fleets_content{
+  width: 500px;
+  margin: auto;
+  text-align: justify;
+}
+
+/* For the responsiveness */
+
+

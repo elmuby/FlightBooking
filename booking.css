@@ -1,0 +1,22 @@
+
+main{
+  width: calc(100%-200px);
+  margin: 0 100px;
+  height: auto; 
+  margin-top: 60px;
+  border-radius: 2rem;
+  border: 1px solid var(--extra-light);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  padding: 10px 0px;
+}
+#toandfro{
+width:calc(100%-100px) ; 
+margin: 10px 50px; 
+height: auto; 
+/* background-color: green; */
+/* border-radius: 2rem;  border: 1px solid var(--extra-light); */
+box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+padding: 10px 0px;
+display: flex;
+gap: 1rem;
+}
