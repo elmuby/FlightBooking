@@ -92,7 +92,7 @@
       <div class="booking_nav">
         <div class="form_group">
           <label for="">Fare:</label>
-          <select name="fare" id="fare">
+          <select name="fare" id="tfare">
             <option value="one_way">One Way</option>
             <option value="return">Return</option>
           </select>
@@ -114,6 +114,14 @@
             <option value="abuja">Abuja</option>
             <option value="kaduna">Kaduna</option>
             <option value="enugu">Enugu</option>
+            <option value="port">Rivers</option>
+            <option value="kano">Kano</option>
+            <option value="benue">Benue</option>
+            <option value="ondo">Ondo</option>
+            <option value="kwara">Kwara</option>
+            <option value="akwa">Akwa Ibom</option>
+            <option value="ibadan">Ibadan</option>
+            <option value="edo">Edo</option>
           </select>
         </div>
 
@@ -127,6 +135,15 @@
             <option value="capetown">Capetown, SouthAfrica</option>
             <option value="lisbon">Lisbon, Portugal</option>
             <option value="ontario">Ontario, Canada</option>
+            <option value="london">London, United Kingdom</option>
+            <option value="beijing">Beijing, China</option>
+            <option value="singapore">Singapore, Singapore</option>
+            <option value="berlin">Berlin, Germany</option>
+            <option value="moscow">Moscow, Russia</option>
+            <option value="madrid">Madrid, Spain</option>
+            <option value="mexico">Mexico City, Mexico</option>
+            <option value="argentina">Buenos Aires, Argentina</option>
+            <option value="rome">Rome, Italy</option>
           </select>
         </div>
       </div>
@@ -162,7 +179,7 @@
           <span><i class="ri-user-3-line"></i> </span>
           <div class="input_content">
             <div class="input_group">
-              <input type="number" id="travellers" required />
+              <input type="number" id="travellers" required min="1" max="10" />
               <!-- <label for="">Travellers</label> -->
             </div>
             <p>Add guest</p>

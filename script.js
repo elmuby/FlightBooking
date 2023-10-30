@@ -1,6 +1,6 @@
-// window.addEventListener('DOMContentLoaded', (event)=>{
+window.addEventListener('DOMContentLoaded', (event)=>{
   //Variable for for the index page
-const selectFare = document.getElementById("fare");
+const selectFare = document.getElementById("tfare");
 const tpClass = document.getElementById("class");
 const from = document.getElementById("from");
 const destination = document.getElementById("to");
@@ -29,7 +29,7 @@ selectFare.addEventListener('input', (event)=>{
     returnDate.disabled = false;
     
   }
-})
+});
 
 //setting the price of class;
 tpClass.addEventListener('input', (event)=>{
@@ -74,7 +74,7 @@ returnDate.addEventListener('input', function(){
   console.log(newDate);
   console.log(today);
 
-  if(selectedDate >= newDate){
+  if(selectedDate > newDate){
     returnError.textContent = 'Return Date must be greater than Depature Date';
     returnError.style.color = 'red';
     returnError.style.fontSize = '13px';
@@ -90,16 +90,13 @@ returnDate.addEventListener('input', function(){
 
 
 // adding event listener to the search button
-//  searchButton.addEventListener('click', (e)=>{
-//   alert(" e dey work");
-//    if(){
-    
-//    }
-// //  })
+ searchButton.addEventListener('click', (e)=>{
+  alert(" e dey work");
+ })
 
 
  
-// })
+})
 
 //variables for the booking page
 
@@ -119,4 +116,4 @@ jar.addEventListener('click', ()=>{
 car.addEventListener('click', ()=>{
  one_arrow.style.display = 'none'
  two_arrow.style.display = 'block'
-})
+})      
