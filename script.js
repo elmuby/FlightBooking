@@ -22,12 +22,9 @@ var tfare;
 selectFare.addEventListener('input', (event)=>{
   if(event.target.value ==='one_way'){
     returnDate.disabled  = true;
-  
   }
-  
   else{
-    returnDate.disabled = false;
-    
+    returnDate.disabled = false; 
   }
 });
 
@@ -91,10 +88,16 @@ returnDate.addEventListener('input', function(){
 
 // adding event listener to the search button
  searchButton.addEventListener('click', (e)=>{
-  alert(" e dey work");
+  if(destination.value = "default"){
+
+    alert(" e dey work");
+    sessionStorage.setItem("departure", from.value)
+    window.location.href = "./booking.html"
+    dep.textContent = destination;
+  }
+  else{
+}
  })
-
-
  
 })
 
@@ -102,18 +105,20 @@ returnDate.addEventListener('input', function(){
 
 
 // if()
-const jar = document.getElementById('one');
-const car = document.getElementById('two');
+// const dataToStore = "Hello from Page 1";
+// sessionStorage.setItem("myData", dataToStore);
+// const jar = document.getElementById('one');
+// const car = document.getElementById('two');
 
-const one_arrow = document.getElementById('one_arrow');
-const two_arrow = document.getElementById('two_arrow');
+// const one_arrow = document.getElementById('one_arrow');
+// const two_arrow = document.getElementById('two_arrow');
 
-jar.addEventListener('click', ()=>{
- one_arrow.style.display = 'block'
- two_arrow.style.display = 'none'
-})
+// jar.addEventListener('click', ()=>{
+//  one_arrow.style.display = 'block'
+//  two_arrow.style.display = 'none'
+// })
 
-car.addEventListener('click', ()=>{
- one_arrow.style.display = 'none'
- two_arrow.style.display = 'block'
-})      
+// car.addEventListener('click', ()=>{
+//  one_arrow.style.display = 'none'
+//  two_arrow.style.display = 'block'
+// })      
