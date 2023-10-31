@@ -15,7 +15,7 @@ const returnError = document.getElementById('returnError');
 
 
 
-// declaring variable for transport fare
+// declaring variable for transport fare and calculating the cost for each
 var tfare;
 
 //setting type of fare
@@ -37,8 +37,9 @@ tpClass.addEventListener('input', (event)=>{
   else if(event.target.value === 'business'){
     tfare = 500000;
   }
-  else if(event.target.value = 'first_class'){
+  else if(event.target.value === 'first_class'){
     tfare = 1500000;
+    console.log(tfare);
   }
 
 })
@@ -67,9 +68,6 @@ depatureDate.addEventListener('input', function(){
 returnDate.addEventListener('input', function(){
   const newDate = new Date(returnDate.value);
   const today = new Date();
-  console.log(selectedDate);
-  console.log(newDate);
-  console.log(today);
 
   if(selectedDate > newDate){
     returnError.textContent = 'Return Date must be greater than Depature Date';
@@ -85,40 +83,28 @@ returnDate.addEventListener('input', function(){
   }
  });
 
+ //adding event listener to the travellers
+ travellers.addEventListener('input' ,function(event){
+  const value = event.target.value;
+  tfare = value * tfare;
+  console.log(tfare);
+ })
 
 // adding event listener to the search button
  searchButton.addEventListener('click', (e)=>{
-  if(destination.value = "default"){
-
-    alert(" e dey work");
-    sessionStorage.setItem("departure", from.value)
-    window.location.href = "./booking.html"
-    dep.textContent = destination;
+  if(selectFare.value === "default" || tpClass.value === "default" ){
+    alert('Check fare or Class')
   }
-  else{
-}
+
+   else if(destination.value ==="default" || from.value === "default") {
+     alert('Check destination or deparutre')
+   }
+  // else if(tfare.value === "")
+  else {
+    sessionStorage.setItem("departure", from.value)
+    // window.location.href = "./booking.html"
+  }
  })
  
 })
 
-//variables for the booking page
-
-
-// if()
-// const dataToStore = "Hello from Page 1";
-// sessionStorage.setItem("myData", dataToStore);
-// const jar = document.getElementById('one');
-// const car = document.getElementById('two');
-
-// const one_arrow = document.getElementById('one_arrow');
-// const two_arrow = document.getElementById('two_arrow');
-
-// jar.addEventListener('click', ()=>{
-//  one_arrow.style.display = 'block'
-//  two_arrow.style.display = 'none'
-// })
-
-// car.addEventListener('click', ()=>{
-//  one_arrow.style.display = 'none'
-//  two_arrow.style.display = 'block'
-// })      

@@ -93,6 +93,7 @@
         <div class="form_group">
           <label for="">Fare:</label>
           <select name="fare" id="tfare">
+            <option value="default">Default</option>
             <option value="one_way">One Way</option>
             <option value="return">Return</option>
           </select>
@@ -100,7 +101,8 @@
 
         <div class="form_group">
           <label for="">class</label>
-          <select name="class" id="class">
+          <select name="class" id="class" required>
+            <option value="default">Default</option>
             <option value="economy">Economy class</option>
             <option value="business">Business class</option>
             <option value="first_class">First class</option>
