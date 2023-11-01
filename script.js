@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event)=>{
+// window.addEventListener('DOMContentLoaded', (event)=>{
   //Variable for for the index page
 const selectFare = document.getElementById("tfare");
 const tpClass = document.getElementById("class");
@@ -12,6 +12,7 @@ const searchButton = document.getElementById("search_button");
 const rtrn = document.getElementById("return");
 const form = document.getElementById("form");
 const returnError = document.getElementById('returnError');
+const travellerError = document.getElementById('travellerError');
 
 
 
@@ -99,12 +100,47 @@ returnDate.addEventListener('input', function(){
    else if(destination.value ==="default" || from.value === "default") {
      alert('Check destination or deparutre')
    }
-  // else if(tfare.value === "")
-  else {
-    sessionStorage.setItem("departure", from.value)
-    // window.location.href = "./booking.html"
+ else if(!depatureDate.value){
+    dateError.textContent= 'Date not selected';
+    dateError.style.color = 'red';
+    dateError.style.fontSize = '13px';
   }
- })
- 
+  else if(!returnDate.disabled){
+    returnError.textContent = 'Return Date Not selected';
+    returnError.style.color = 'red';
+    returnError.style.fontSize = '13px';
+  }
+  else if(travellers.value ===''){
+    travellerError.textContent = 'Please select traveller';
+    travellerError.style.color = 'red';
+    travellerError.style.fontSize = '13px';
+  }
+  else {
+    alert("e dey work");
+    dateError.textContent= "";
+    returnDate.textContent ="";
+    travellerError.textContent = "";
+    john = true
+    window.location.href = "./booking.html";
+    sessionStorage.setItem("departure", from.value);
+    sessionStorage.setItem("fare", selectFare.value);
+    sessionStorage.setItem("destination", destination.value);
+    sessionStorage.setItem("travellers", travellers.value);
+    sessionStorage.setItem("depart", depatureDate.value)
+  }
 })
 
+// })
+
+var john = false
+
+searchButton.addEventListener('click', (e)=>{
+  alert(john)
+  if (john == true){
+    
+    window.location.href = "./booking.html";
+  }
+  else{
+    alert("bannanannan")
+  }
+})

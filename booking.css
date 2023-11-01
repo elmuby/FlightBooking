@@ -3,20 +3,34 @@ main{
   width: calc(100%-200px);
   margin: 0 100px;
   height: auto; 
-  margin-top: 60px;
+  /* margin-top: 60px; */
   border-radius: 2rem;
   border: 1px solid var(--extra-light);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   padding: 10px 0px;
 }
 #toandfro{
-width:calc(100%-100px) ; 
-margin: 10px 50px; 
+/* width:calc(100%-100px) ;  */
+/* margin: 10px 50px;  */
 height: auto; 
 /* background-color: green; */
 /* border-radius: 2rem;  border: 1px solid var(--extra-light); */
-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+/* box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1); */
+
 padding: 10px 0px;
 display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
 gap: 1rem;
+}
+#land, #dep{
+  font-size: 2rem;
+}
+
+#flight_content{
+display: grid;
+grid-template-columns: 1fr;
+margin: auto;
+text-align: center;
 }
