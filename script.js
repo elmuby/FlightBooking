@@ -1,5 +1,6 @@
 // window.addEventListener('DOMContentLoaded', (event)=>{
   //Variable for for the index page
+document.getElementById
 const selectFare = document.getElementById("tfare");
 const tpClass = document.getElementById("class");
 const from = document.getElementById("from");
@@ -32,14 +33,14 @@ selectFare.addEventListener('input', (event)=>{
 //setting the price of class;
 tpClass.addEventListener('input', (event)=>{
   if(event.target.value === 'economy'){
-    tfare = 2500000;
+    tfare = 1500000;
     console.log(tfare);
   }
   else if(event.target.value === 'business'){
-    tfare = 500000;
+    tfare = 2500000;
   }
   else if(event.target.value === 'first_class'){
-    tfare = 1500000;
+    tfare = 3500000;
     console.log(tfare);
   }
 
@@ -105,7 +106,7 @@ returnDate.addEventListener('input', function(){
     dateError.style.color = 'red';
     dateError.style.fontSize = '13px';
   }
-  else if(!returnDate.disabled){
+  else if(returnDate.disabled === false && !returnDate.value){
     returnError.textContent = 'Return Date Not selected';
     returnError.style.color = 'red';
     returnError.style.fontSize = '13px';
@@ -116,7 +117,7 @@ returnDate.addEventListener('input', function(){
     travellerError.style.fontSize = '13px';
   }
   else {
-    alert("e dey work");
+    // alert("e dey work");
     dateError.textContent= "";
     returnDate.textContent ="";
     travellerError.textContent = "";
@@ -126,7 +127,11 @@ returnDate.addEventListener('input', function(){
     sessionStorage.setItem("fare", selectFare.value);
     sessionStorage.setItem("destination", destination.value);
     sessionStorage.setItem("travellers", travellers.value);
-    sessionStorage.setItem("depart", depatureDate.value)
+    sessionStorage.setItem("depart", depatureDate.value);
+    sessionStorage.setItem("return",returnDate.value);
+    sessionStorage.setItem("class", tpClass.value);
+    sessionStorage.setItem("price",tfare);
+    
   }
 })
 
@@ -135,12 +140,11 @@ returnDate.addEventListener('input', function(){
 var john = false
 
 searchButton.addEventListener('click', (e)=>{
-  alert(john)
   if (john == true){
     
     window.location.href = "./booking.html";
   }
   else{
-    alert("bannanannan")
+    alert("Error")
   }
 })

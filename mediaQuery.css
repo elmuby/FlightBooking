@@ -53,3 +53,25 @@
       font-size: .8rem;
     }
   }
+
+  @media(width<700px){
+    .bb{
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
+    #flight_content{
+      /* display: grid; */
+      grid-template-columns: 1fr;
+      /* margin: auto; */
+      text-align: center;
+      }
+      #flight_content p {
+        font-size: 1rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      #land, #dep{
+        font-size: 2rem;
+      }
+  }
