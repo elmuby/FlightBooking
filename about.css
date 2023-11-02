@@ -1,0 +1,57 @@
+/* Style for the content container */
+
+
+
+.content-container {
+  display: flex;
+  align-items: center; 
+  padding: 20px; 
+}
+
+/* Style for the text content */
+.text-content {
+  flex: 1; /* Take up available horizontal space */
+}
+
+/* Style for the image container */
+.image-container {
+  flex: 1; /* Take up available horizontal space */
+  text-align: right; /* Align the image to the right */
+}
+
+/* Additional styling for the image (adjust as needed) */
+.image-container img {
+  max-width: 100%; /* Ensure the image doesn't overflow its container */
+  height: auto; /* Maintain the image's aspect ratio */
+
+  #video-tag {
+  color: #333; 
+  font-size: 24px; 
+  text-align: center; 
+  
+}
+
+}
+#video-tag {
+  color: #333; 
+  font-size: 24px; 
+  text-align: center; 
+  
+}
+
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the video section covers the entire viewport height */
+}
+
+.video-section video {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+
+
