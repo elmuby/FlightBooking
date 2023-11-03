@@ -1,8 +1,5 @@
 // window.addEventListener('DOMContentLoaded', (event)=>{
 //   //Variable for for the index page
-// for(var i = 0, i=1, i++){
-//   window.href.location = index.html;
-// }
 const selectFare = document.getElementById("tfare");
 const tpClass = document.getElementById("class");
 const from = document.getElementById("from");
@@ -119,12 +116,11 @@ returnDate.addEventListener('input', function(){
     travellerError.style.fontSize = '13px';
   }
   else {
-    // alert("e dey work");
+    alert("e dey work");
     dateError.textContent= "";
     returnDate.textContent ="";
     travellerError.textContent = "";
-    john = true
-    window.location.href = "./booking.html";
+    john = true;
     sessionStorage.setItem("departure", from.value);
     sessionStorage.setItem("fare", selectFare.value);
     sessionStorage.setItem("destination", destination.value);
@@ -142,8 +138,9 @@ returnDate.addEventListener('input', function(){
 var john = false
 
 searchButton.addEventListener('click', (e)=>{
-  if (john == true){
-    
+  if (john === true){  
+    alert('received');
+    e.preventDefault();
     window.location.href = "./booking.html";
   }
   else{
