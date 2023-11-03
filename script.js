@@ -1,6 +1,8 @@
 // window.addEventListener('DOMContentLoaded', (event)=>{
-  //Variable for for the index page
-document.getElementById
+//   //Variable for for the index page
+// for(var i = 0, i=1, i++){
+//   window.href.location = index.html;
+// }
 const selectFare = document.getElementById("tfare");
 const tpClass = document.getElementById("class");
 const from = document.getElementById("from");
